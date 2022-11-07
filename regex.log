@@ -1,0 +1,142 @@
+Replace everything inside square brackets:  \[(.*?)\]
+Replace everything inside parenthesis      :  \([^)]*\)
+Match strings with <h1> tags : (?s)<h1>.+</h1>
+Match contents inside <h1> tags (?s)(?<=<h1>)(.+?)(?=</h1>)
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select all the lines containing for example dyno_bethistory.php  -->  ^.*dyno_bet.*$
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select all the lines NOT containing string eg dyno_bethistory.php  -->  ^((?!dyno_bet).)*$
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Remove blank lines (?m)^[ \t]*\r?\n
+Remove blank lines with cardinality more than 2 ((?m)^[ \t]*\r?\n){2,} and replace with one new line \n
+Remove blank lines ^[ \t]*$\r?\n
+Remove NULL [\x0]
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Matches all HTML tags pairs including attributes in the tags    <(.|\n)*?>       --->  example: <div class="something">lala</div>
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Remove html tags:
+<(.*?)>  ή
+(<([^>]+)>)
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Emails:  \b[\w\.-]+@[\w\.-]+\.\w{2,4}\b
+Emails:  \b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Edo exei polla:
+http://www.pagecolumn.com/tool/all_about_html_tags.htm
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+MD5:     /^[0-9a-f]{32}$/i     , Python:    ([a-fA-F\d]{32})
+SHA1:   /^[0-9a-f]{40}$/i     , Python:    ([a-fA-F\d]{40})
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select everything except commas
+[^,;]+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select numbers (with decimal)
+[\.0-9]
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select 5 digit numbers (integers)
+(\d{5})
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Finding Comments in Source Code
+/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/      gia ayta ta */comment*/
+(/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/)|(//.*)       gia ayta: //ta comment
+//.*?\n|/\*.*?\*/       gia ta apla ta //comment (i diafora einai oti den crasarei to sublime otan psaxno polla arxeia
+<!--(.*?)-->     gia ayta ta comments: <!-- lalala -->
+<!--(?!<!)[^\[>].*?-->     gia ayta ta comments: <!-- some --> ektos apo ta conditional [IE]
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select time in format hh:mm:ss
+\d{1,2}:\d{2}:\d{2}
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+Select everything  after a specific character, for example @,
+\@(.*)
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+Select only filename from path:
+[^\\]*$
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+^[ \t]+     to trim leading whitespace
+[ \t]+$     to trim trailing whitespace
+
+^(\t*)[ ]+  to trim leading tabs with spaces
+
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+.*\n          Place a cursor in every line.
+.*\n.*\n      Place a cursor in every odd line.
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select values in quotes (with quotes): "(.*?)"
+Select values in single/double quotes (with quotes): (["'])(?:(?=(\\?))\2.)*?\1
+Select values in quotes (without quotes): (?<=")[^"]*(?=")
+Select values in quotes (without quotes): (?<=")(?:\\.|[^"\\])*(?=")
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Match line that doesn't contain a word example hede:   ^((?!hede).)*$
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Find unicode characters : [^\x00-\x7F]+
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Match every second occurence:
+foo.*?(foo)
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Match lines with more than 22 characters
+.{22,}
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+Match all floats
+([0-9]*\.?[0-9]+)
+([-+]?[0-9]*\.?[0-9]+\,?)  //All floats (separated with commas, e.g for latitude and longitude)
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Clear console in Sublime
+print('\n'*100)
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+You can also combine them, to ensure that it contains "Android" at some place AND "Mobile" at some place:
+^(?=.*Android)(?=.*Mobile).*
+If you want to ensure that a certain word is NOT in the string, use the negative look ahead:
+^(?=.*Android)(?!.*Mobile).*
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Not containing word Scores:
+^((?!scores).)*$
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Search two words in a line
+^.*?\bόνομα\b.*?\bσωστό\b.*?$
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select x lines after a string (e.g 8 lines after PREGAME)
+PREGAME([\r\n]+([^\r\n]+)){8}
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select between two strings
+(?<=% of )(.*)(?= at ) //with back propagation (e.g. text [download]   0.0% of 57.90MiB at 24.96KiB/s ETA 39:35)
+or
+min-width:(.*)px  // (e.g. text (min-width: 768px) and (max-width: 1023px)
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select digits after specified string
+\bMin no of trucks:\s+\K\d+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select everything between 2 tags:
+<DepositResponse>(.|\n)*?</DepositResponse>
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Find password in URL:
+(?<=:)([^@:]+)(?=@[^@]+$)
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select everything inside double quotes when inside a tag (e.g. inside OddsField search for type="XX" and get XX):
+(<OddsField[\s\S]*?.(\ type\=\"((.)*?)\") \/>)
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+Select everything between two strings (e.g. select everything between <div> and </div>):
+(?<=<div>)([\s\S]*?)(?=</div>)
+~-~-~-~-~-~-~-~-~-~-~-~-~-
+
+
+
