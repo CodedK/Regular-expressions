@@ -12,7 +12,7 @@
 - Matches all HTML tags pairs including attributes in the tags
 - Remove html tags
 - Select emails
-- Select strings from hash functions (md5, sha1, sha256, sha512)
+- Select strings from hash functions (`md5`, `sha1`, `sha256`, `sha512`)
 - Select everything except commas
 - Select numbers (with decimal)
 - Select 5 digit numbers (integers)
