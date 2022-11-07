@@ -1,5 +1,5 @@
-Replace everything inside square brackets:  \[(.*?)\]
-Replace everything inside parenthesis      :  \([^)]*\)
+Replace everything inside square brackets:  `\[(.*?)\]`
+Replace everything inside parenthesis:  \([^)]*\)
 Match strings with <h1> tags : (?s)<h1>.+</h1>
 Match contents inside <h1> tags (?s)(?<=<h1>)(.+?)(?=</h1>)
 ~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
