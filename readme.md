@@ -1,0 +1,42 @@
+# Regular expression list
+
+- Replace everything inside square brackets
+- Replace everything inside parenthesis
+- Select rows with <h1> tags
+- Select contents inside <h1> tags
+- Select all the lines containing a string e.g. `dyno_bethistory.php`
+- Select all the lines NOT containing a string e.g. `dyno_bethistory.php`
+- Remove blank lines
+- Remove blank lines with cardinality more than 2 and replace with one new line
+- Remove NULL
+- Matches all HTML tags pairs including attributes in the tags
+- Remove html tags
+- Select Emails
+- Select strings from hash functions (md5, sha1, sha256, sha512)
+- Select everything except commas
+- Select numbers (with decimal)
+- Select 5 digit numbers (integers)
+- Finding Comments in Source Code
+- Select time in format hhmmss
+- Select everything  after a specific character, e.g. @
+- Select only filename from path
+- Trim leading whitespace
+- Trim leading tabs with spaces
+- Place cursor in every line.
+- Place cursor in every odd line.
+- Select values in quotes (with quotes)
+- Select values in single/double quotes (with quotes)
+- Select values in quotes (without quotes)
+- Match line that doesn't contain a word example `badword`
+- Find unicode characters
+- Match every second occurence
+- Match lines with more than 22 characters
+- Match all floats
+- Search two words in a line
+- Select n lines after a string
+- Select between two strings
+- Select digits after specified string
+- Select everything between 2 tags
+- Find password in URL
+- Select everything inside double quotes when inside a tag (e.g. inside OddsField search for type="XX" and get XX)
+- Select everything between two strings (e.g. select everything between `<div>` and `</div>`)
