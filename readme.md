@@ -38,5 +38,5 @@
 - Select digits after specified string
 - Select everything between 2 tags
 - Find password in URL
-- Select everything inside double quotes when inside a tag (e.g. inside OddsField search for type="XX" and get XX)
+- Select everything inside double quotes when inside a tag (e.g. search for `type="XX"` and get `XX`)
 - Select everything between two strings (e.g. select everything between `<div>` and `</div>`)
