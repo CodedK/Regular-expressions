@@ -2,8 +2,8 @@
 
 - Replace everything inside square brackets
 - Replace everything inside parenthesis
-- Select rows with <h1> tags
-- Select contents inside <h1> tags
+- Select rows with `<h1>` tags
+- Select contents inside `<h1>` tags
 - Select all the lines containing a string e.g. `dyno_bethistory.php`
 - Select all the lines NOT containing a string e.g. `dyno_bethistory.php`
 - Remove blank lines
