@@ -8,17 +8,17 @@
 - Select all the lines NOT containing a string e.g. `dyno_bethistory.php`
 - Remove blank lines
 - Remove blank lines with cardinality more than 2 and replace with one new line
-- Remove NULL
+- Remove `NULL`
 - Matches all HTML tags pairs including attributes in the tags
 - Remove html tags
-- Select Emails
+- Select emails
 - Select strings from hash functions (md5, sha1, sha256, sha512)
 - Select everything except commas
 - Select numbers (with decimal)
 - Select 5 digit numbers (integers)
 - Finding Comments in Source Code
 - Select time in format hhmmss
-- Select everything  after a specific character, e.g. @
+- Select everything  after a specific character, e.g. `@`
 - Select only filename from path
 - Trim leading whitespace
 - Trim leading tabs with spaces
